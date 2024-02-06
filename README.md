@@ -1,66 +1,39 @@
-## Foundry
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+# ERC20
 
-Foundry consists of:
+The ERC-20 Token Contract is a standard interface for fungible tokens on the Ethereum blockchain. It defines a set of rules and functionalities that enable interoperability between different tokens and decentralized applications (DApps).
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
 
-## Documentation
 
-https://book.getfoundry.sh/
 
-## Usage
 
-### Build
+## Deployment
 
-```shell
-$ forge build
+1. Spin an anvil node
+
+```solidty
+  make anvil
 ```
 
-### Test
+2.To deploy this project run
 
-```shell
-$ forge test
+```solidty
+  make deploy
+```
+3. To deploy this project run
+
+```solidty
+  npm run deploy
 ```
 
-### Format
 
-```shell
-$ forge fmt
-```
+## Environment Variables
 
-### Gas Snapshots
+To run this project, you will need to add the following environment variables to your .env file
 
-```shell
-$ forge snapshot
-```
+`PRIVATE_KEY`
 
-### Anvil
+`ETHERSCAN_API_KEY`
 
-```shell
-$ anvil
-```
+`SEPOLIA_RPC_URL`
 
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
